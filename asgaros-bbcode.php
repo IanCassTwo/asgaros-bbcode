@@ -4,7 +4,7 @@ Plugin Name: Asgaros BBCode
 Plugin URI: https://github.com/IanCassTwo/asgaros-bbcode
 Description: A WordPress plugin to render bbcode in Asgaros posts
 Author: Ian Cass
-Version: 0.1
+Version: 0.2
 Author URI: https://github.com/IanCassTwo
 */
 
