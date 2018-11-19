@@ -52,11 +52,15 @@ function bbcode_to_html($bbtext){
           '[code]' => '<code>','[/code]' => '</code>',
           '[preformatted]' => '<pre>','[/preformatted]' => '</pre>',
           '[pre]' => '<pre>','[/pre]' => '</pre>',
+          '[quote]' => '<blockquote>','[/quote]' => '</blockquote>',
+
         );
 
         $bbtext = str_ireplace(array_keys($bbtags), array_values($bbtags), $bbtext);
 
         $bbextended = array(
+          "/\[color=(.*?)\]/i" => "<font color=\"$1\">",
+          "/\[\/color\]/i" => "</font>",
           "/\[url](.*?)\[\/url]/i" => "<a href=\"http://$1\" title=\"$1\">$1</a>",
           "/\[url=(.*?)\](.*?)\[\/url\]/i" => "<a href=\"$1\" title=\"$1\">$2</a>",
           "/\[email=(.*?)\](.*?)\[\/email\]/i" => "<a href=\"mailto:$1\">$2</a>",
